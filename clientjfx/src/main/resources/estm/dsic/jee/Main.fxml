@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="white-form" stylesheets="@loginDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.services.BankService">
+   <children>
+      <VBox layoutX="10.666666666666666" layoutY="10.666666666666666" prefHeight="73.0" prefWidth="589.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <HBox prefHeight="71.0" prefWidth="589.0">
+               <children>
+                  <Label fx:id="welcome" alignment="BOTTOM_LEFT" prefHeight="25.0" prefWidth="511.0" text="Welcome back !">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="logout" mnemonicParsing="false" onAction="#logout" styleClass="login-btn" stylesheets="@loginDesign.css" text="Logout" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="49.0" prefWidth="65.0" text="Balance :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="balance" prefHeight="43.0" prefWidth="158.0" text="0.0DH">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefHeight="45.0" prefWidth="115.0" text="Account Number :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="account_number" prefHeight="45.0" prefWidth="242.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="2.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="16.666666666666668" layoutY="87.0" prefHeight="77.0" prefWidth="578.0" spacing="140.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0">
+         <children>
+            <VBox fx:id="deposit" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#deposit" prefHeight="80.0" prefWidth="80.0" styleClass="pics" stylesheets="@loginDesign.css">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Pics/Deposit.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Deposit">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="withdarwal" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#withdarwal" prefHeight="80.0" prefWidth="80.0" styleClass="pics" stylesheets="@loginDesign.css">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Pics/Withdrawal.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Withdrawl">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="transfer" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#transfer" prefHeight="80.0" prefWidth="80.0" styleClass="pics" stylesheets="@loginDesign.css">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Pics/Transfer.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Transfer">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Pane layoutX="10.666666666666666" layoutY="161.0" prefHeight="33.0" prefWidth="589.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="6.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="45.0" prefWidth="600.0" text="History" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Line endX="585.3333129882812" endY="8.333328247070312" startX="3.178914482759865E-7" startY="8.333328247070312" />
+         </children>
+      </Pane>
+      <TableView fx:id="history" layoutX="10.666666666666666" prefHeight="195.0" prefWidth="582.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+        <columns>
+          <TableColumn fx:id="from" prefWidth="120.0" text="FROM" />
+          <TableColumn fx:id="to" prefWidth="120.0" text="TO" />
+            <TableColumn fx:id="operation" prefWidth="120.0" text="OPERATION" />
+            <TableColumn fx:id="amount" prefWidth="110.0" text="AMOUNT" />
+            <TableColumn fx:id="date" prefWidth="118.0" text="DATE" />
+        </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="258.0" prefWidth="257.0" styleClass="white-form" stylesheets="@loginDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="business.services.OperationsService">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="217.0" styleClass="head-label" stylesheets="@BankDesign.css" text="Transfer" textFill="#4a7ce9">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Label>
+      <VBox alignment="CENTER" prefHeight="151.0" prefWidth="257.0">
+         <children>
+            <Label text="Recipent" textFill="#888282">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="account_transfer" prefHeight="35.0" prefWidth="214.0" promptText="Account Number" styleClass="textfield" stylesheets="@loginDesign.css" />
+            <Label layoutX="57.0" layoutY="39.0" text="Amount To Withdraw" textFill="#888282">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="amount_transfer" layoutX="30.0" layoutY="45.0" prefHeight="35.0" prefWidth="214.0" promptText="Amount" styleClass="textfield" stylesheets="@loginDesign.css" />
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="257.0">
+         <children>
+            <Button fx:id="transfer" mnemonicParsing="false" onAction="#transfer" prefHeight="35.0" prefWidth="154.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="Transfer" textAlignment="CENTER" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
